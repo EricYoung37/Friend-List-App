@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :friends
   # get 'home/index' # 127.0.0.1:3000/home/index
   root 'home#index' # 127.0.0.1:3000 invokes views/home/index.html.erb

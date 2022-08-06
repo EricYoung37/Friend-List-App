@@ -15,7 +15,10 @@
 
     <%=render "layouts/navbar" %>
     <div class="container">
-      <br/>
+      <br>
+      <% if notice %>
+        <%= render "layouts/alert" %>
+      <% end %>
       <%= yield %>
     </div>
 
