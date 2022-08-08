@@ -1,13 +1,11 @@
-
 <table class="table table-striped table-bordered table-hover">
   <thead class="table-dark">
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
+      <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
       <th>Twitter</th>
-      <th colspan="3"></th>
+      <!--<th colspan="1"></th>-->
     </tr>
   </thead>
 
@@ -15,17 +13,15 @@
     <% @friends.each do |friend| %>
       <% if friend.user == current_user %>
       <tr>
-        <td><%= friend.first_name %></td>
-        <td><%= friend.last_name %></td>
+        <td><%= link_to friend.first_name+" "+ friend.last_name, friend %></td>
         <td><%= friend.email %></td>
         <td><%= friend.phone %></td>
         <td><%= friend.twitter %></td>
-        <td><%= link_to "Show", friend %></td>
-        <td><%= link_to "Edit", edit_friend_path(friend) %></td>
-        <td><%= link_to "Delete", friend, data: {
+        <!--<td><%= link_to "Edit", edit_friend_path(friend) %></td>-->
+        <!--<td><%= link_to "Delete", friend, data: {
           turbo_method: :delete,
           turbo_confirm: "Are you sure?"
-        }%></td>
+        }, class:"btn btn-outline-danger btn-sm"%></td>-->
 
         <!--alternative delete-->
         <!--<td><%= button_to "Destroy this friend", friend, method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} %></td>-->
