@@ -1,2 +1,18 @@
-<h1>Home</h1>
-<p>Home page here</p>
+<div class="card text-center" style="width: 18rem;">
+  <%=image_tag("HomePage.jpg")%>
+
+  <div class="card-body">
+    <h5 class="card-title">Welcome to Friend List!</h5>
+    <p class="card-text">This app helps you record the contact information of your friends.</p>
+
+    <button type="button" class="btn btn-secondary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 1rem;">
+        <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
+    </button>
+
+    <button type="button" class="btn btn-dark"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 1rem;">
+        <%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
+    </button>
+  </div>
+</div>
