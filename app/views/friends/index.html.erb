@@ -13,6 +13,7 @@
 
   <tbody>
     <% @friends.each do |friend| %>
+      <% if friend.user == current_user %>
       <tr>
         <td><%= friend.first_name %></td>
         <td><%= friend.last_name %></td>
@@ -29,6 +30,7 @@
         <!--alternative delete-->
         <!--<td><%= button_to "Destroy this friend", friend, method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} %></td>-->
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 
